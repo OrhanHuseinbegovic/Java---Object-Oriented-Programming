@@ -20,7 +20,7 @@ public class DataStructures {
 
     // TODO create a method getByStatus that will accept a Status parameter and filter the tasks with the provided status
 
-    public Optional<TaskItem> getByStatus(TaskStatus currStat){
+    public void getByStatus(TaskStatus currStat){
         tasks = tasks.stream()
                 .filter(tasks -> tasks.getTaskStatus().equals(currStat))
                 .collect(Collectors.toList());
