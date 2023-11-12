@@ -1,38 +1,19 @@
 package HashMapExercises;
 
 import java.util.HashMap;
-
 public class Main {
     public static void main(String[] args) {
-        /*
-        HashMap<String, String> nicknameMap = new HashMap<>();
+        Book senseAndSensibility = new Book("Sense and Sensibility", 1811, "...");
+        Book prideAndPrejudice = new Book("Pride and Prejudice", 1813, "....");
 
-        nicknameMap.put("matti", "mage");
-        nicknameMap.put("mikael", "mixu");
-        nicknameMap.put("arto", "arppa");
-
-        String mikaelNickname = nicknameMap.get("mikael");
-        System.out.println("Mikael's nickname is: " + mikaelNickname);
-         */
+        HashMap<String, Book> bookCollection = new HashMap<String, Book>();
+        bookCollection.put(senseAndSensibility.getName(), senseAndSensibility);
+        bookCollection.put(prideAndPrejudice.getName(), prideAndPrejudice);
 
 
-        PromissoryNote mattisNote = new PromissoryNote();
-        mattisNote.setLoan("Arto", 51.5);
-        mattisNote.setLoan("Mikael", 30);
-
-
-        System.out.println(mattisNote.howMuchIsTheDebt("Arto"));
-        System.out.println(mattisNote.howMuchIsTheDebt("Joel"));
-
-        /*
-        PromissoryNote mattisNote = new PromissoryNote();
-        mattisNote.setLoan("Arto", 51.5);
-        mattisNote.setLoan("Arto", 10.5);
-
-
-        System.out.println(mattisNote.howMuchIsTheDebt("Arto"));
-
-         */
+        System.out.println(bookCollection.get("Sense and Sensibility"));
+        System.out.println();
+        System.out.println(bookCollection.get("Pride and Prejudice"));
 
     }
 }
