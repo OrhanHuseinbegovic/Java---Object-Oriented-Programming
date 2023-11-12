@@ -1,20 +1,26 @@
-package Week6Lab;
+package Boxes;
 
 public class CD implements ToBeStored{
+    //parameter contains its artist (String), title (String),
+    // and publishing year (int). All CDs weigh 0.1 kg.
     private String artist;
     private String title;
     private int publishingYear;
     private double weight;
-
     CD(String artist, String title, int publishingYear){
-        this.artist = artist;
-        this.title = title;
-        this.publishingYear = publishingYear;
-        this.weight = 0.1;
+        this.artist=artist;
+        this.title=title;
+        this.publishingYear=publishingYear;
+        this.weight=0.1;
     }
 
     public String getArtist() {
         return artist;
+    }
+
+    @Override
+    public double weight(){
+        return this.weight;
     }
 
     public void setArtist(String artist) {
@@ -47,10 +53,6 @@ public class CD implements ToBeStored{
 
     @Override
     public String toString(){
-        return this.getArtist()+": "+this.getTitle()+" ("+this.getPublishingYear()+")";
-    }
-
-    public double weight(){
-        return 0;
+        return this.artist+": "+this.title+" ("+this.publishingYear+")";
     }
 }

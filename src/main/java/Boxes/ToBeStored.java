@@ -1,4 +1,4 @@
-package Week6Lab;
+package Boxes;
 
 public interface ToBeStored {
     double weight();
